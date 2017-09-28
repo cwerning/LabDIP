@@ -17,7 +17,7 @@ public class FileInput implements Input {
     private String fileName;
     private String message;
 
-    private File inFile = new File(getFileName());
+    private final File inFile = new File(getFileName());
 
     public FileInput(String fileName) {
         this.setFileName(fileName);
