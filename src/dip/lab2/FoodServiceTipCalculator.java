@@ -1,3 +1,4 @@
+
 package dip.lab2;
 
 /**
@@ -24,6 +25,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
         this.setBill(billAmt);
     }
 
+    @Override
     public final double getTip() {
 //        double tip = 0.00; // always initialize local variables
 

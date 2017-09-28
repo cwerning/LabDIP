@@ -15,7 +15,7 @@ public class KeyboardInput implements Input {
 
     public KeyboardInput(String KeyboardInput) {
         
-        this.keyboardInput = KeyboardInput;
+        this.setKeyboardInput(KeyboardInput);
     }
 
     @Override

@@ -16,7 +16,7 @@ public class GuiOutput implements Output {
     String input;
 
     public GuiOutput(String input) {
-        this.input = input;
+        this.setInput(input);
     }
     
     @Override

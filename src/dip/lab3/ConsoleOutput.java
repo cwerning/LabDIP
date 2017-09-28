@@ -29,7 +29,7 @@ public class ConsoleOutput implements Output{
     public final void setInput(String input) {
         if (input == null || input.length() <= 0) {
 
-            throw new IllegalArgumentException("Error: File Name cannot be null or have nothing.");
+            throw new IllegalArgumentException("Error: Input cannot be null or have nothing.");
 
         }
         this.input = input;

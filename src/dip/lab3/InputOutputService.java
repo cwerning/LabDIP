@@ -17,7 +17,7 @@ public class InputOutputService {
     private Output output;
 
     public InputOutputService(Output output) {
-        this.output = output;
+        this.setOutput(output);
     }
 
     public InputOutputService(Input input) {

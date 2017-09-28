@@ -20,7 +20,7 @@ public class FileInput implements Input {
     File inFile = new File(getFileName());
 
     public FileInput(String fileName) {
-        this.fileName = fileName;
+        this.setFileName(fileName);
     }
 
     public final String readFile() throws FileNotFoundException {
