@@ -9,6 +9,25 @@ package dip.lab3;
  *
  * @author L115student
  */
-public class KeyboardInput {
-    
+public class KeyboardInput implements Input {
+
+    String keyboardInput;
+
+    public KeyboardInput(String KeyboardInput) {
+        this.keyboardInput = KeyboardInput;
+    }
+
+    @Override
+    public String getInput() {
+        return getKeyboardInput();
+    }
+
+    public String getKeyboardInput() {
+        return keyboardInput;
+    }
+
+    public void setKeyboardInput(String KeyboardInput) {
+        this.keyboardInput = KeyboardInput;
+    }
+
 }

@@ -9,6 +9,27 @@ package dip.lab3;
  *
  * @author L115student
  */
-public class ConsoleOutput {
+public class ConsoleOutput implements Output{
+    
+    String input;
+
+    public ConsoleOutput(String input) {
+        this.input = input;
+    }
+    
+    @Override
+    public String getOutput(){
+        return input;
+    }
+
+    public String getInput() {
+        return input;
+    }
+
+    public void setInput(String input) {
+        this.input = input;
+    }
+    
+    
     
 }

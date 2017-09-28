@@ -9,6 +9,7 @@ package dip.lab3;
  *
  * @author L115student
  */
-public class Output {
-    
+public interface Output {
+
+    public abstract String getOutput();
 }

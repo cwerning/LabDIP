@@ -9,6 +9,42 @@ package dip.lab3;
  *
  * @author L115student
  */
-public class FileInput {
-    
+import java.io.*;
+import java.util.Scanner;
+
+public class FileInput implements Input {
+
+    String fileName;
+    String message;
+
+    File inFile = new File(getFileName());
+
+    public FileInput(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public String readFile() throws FileNotFoundException {
+        try (Scanner inputFile = new Scanner(inFile)) {
+            while (inputFile.hasNext()) {
+
+                message += inputFile.nextLine();
+
+            }
+        }
+        return message;
+    }
+
+    @Override
+    public final String getInput() throws FileNotFoundException {
+        return readFile();
+    }
+
+    public final String getFileName() {
+        return fileName;
+    }
+
+    public final void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
 }

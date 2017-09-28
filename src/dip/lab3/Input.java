@@ -5,10 +5,14 @@
  */
 package dip.lab3;
 
+import java.io.FileNotFoundException;
+
 /**
  *
  * @author L115student
  */
-public class Input {
+public interface Input {
+    
+    public abstract String getInput() throws FileNotFoundException ;
     
 }

@@ -9,6 +9,29 @@ package dip.lab3;
  *
  * @author L115student
  */
-public class GuiOutput {
+import javax.swing.JOptionPane;
+
+public class GuiOutput implements Output {
     
+    String input;
+
+    public GuiOutput(String input) {
+        this.input = input;
+    }
+    
+    @Override
+    public String getOutput(){
+       return JOptionPane.showInputDialog(null, input);
+    }
+
+    public String getInput() {
+        return input;
+    }
+
+    public void setInput(String input) {
+        this.input = input;
+    }
+    
+    
+
 }
