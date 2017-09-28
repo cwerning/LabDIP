@@ -5,13 +5,15 @@
  */
 package dip.lab3;
 
+import java.io.FileNotFoundException;
+
 /**
  *
  * @author L115student
  */
 public class Startup {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         KeyboardInput input1 = new KeyboardInput("Hello World");
         InputOutputService inOutService1 = new InputOutputService(input1);

@@ -23,7 +23,7 @@ public class FileInput implements Input {
         this.fileName = fileName;
     }
 
-    public String readFile() throws FileNotFoundException {
+    public final String readFile() throws FileNotFoundException {
         try (Scanner inputFile = new Scanner(inFile)) {
             while (inputFile.hasNext()) {
 
@@ -44,6 +44,11 @@ public class FileInput implements Input {
     }
 
     public final void setFileName(String fileName) {
+        if (fileName == null || fileName.length() <= 0) {
+
+            throw new IllegalArgumentException("Error: File Name cannot be null or have nothing.");
+
+        }
         this.fileName = fileName;
     }
 

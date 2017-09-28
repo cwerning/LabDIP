@@ -5,6 +5,8 @@
  */
 package dip.lab3;
 
+import java.io.FileNotFoundException;
+
 /**
  *
  * @author L115student
@@ -26,23 +28,33 @@ public class InputOutputService {
         return output;
     }
 
-    public void setOutput(Output output) {
+    public final void setOutput(Output output) {
+        if (output == null) {
+
+            throw new IllegalArgumentException("Error: Keyboard output cannot be null.");
+
+        }
         this.output = output;
     }
 
-    public Input getInput() {
+    public final Input getInput() {
         return input;
     }
 
-    public void setInput(Input input) {
+    public final void setInput(Input input) {
+        if (input == null) {
+
+            throw new IllegalArgumentException("Error: Keyboard Input cannot be null.");
+
+        }
         this.input = input;
     }
 
-    public String getTheInput() {
+    public final String getTheInput() throws FileNotFoundException {
         return input.getInput();
     }
 
-    public String getTheOutput() {
+    public final String getTheOutput() {
         return output.getOutput();
     }
 

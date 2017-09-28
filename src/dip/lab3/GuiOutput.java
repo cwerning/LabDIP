@@ -20,15 +20,20 @@ public class GuiOutput implements Output {
     }
     
     @Override
-    public String getOutput(){
+    public final String getOutput(){
        return JOptionPane.showInputDialog(null, input);
     }
 
-    public String getInput() {
+    public final String getInput() {
         return input;
     }
 
-    public void setInput(String input) {
+    public final void setInput(String input) {
+        if (input == null || input.length() <= 0) {
+
+            throw new IllegalArgumentException("Error: Keyboard output cannot be null or have nothing.");
+
+        }
         this.input = input;
     }
     

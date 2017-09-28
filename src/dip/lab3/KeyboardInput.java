@@ -14,19 +14,25 @@ public class KeyboardInput implements Input {
     String keyboardInput;
 
     public KeyboardInput(String KeyboardInput) {
+        
         this.keyboardInput = KeyboardInput;
     }
 
     @Override
-    public String getInput() {
+    public final String getInput() {
         return getKeyboardInput();
     }
 
-    public String getKeyboardInput() {
+    public final String getKeyboardInput() {
         return keyboardInput;
     }
 
-    public void setKeyboardInput(String KeyboardInput) {
+    public final void setKeyboardInput(String KeyboardInput) {
+        if (KeyboardInput == null || KeyboardInput.length() == 0) {
+
+            throw new IllegalArgumentException("Error: Keyboard Input cannot be null of empty string");
+
+        }
         this.keyboardInput = KeyboardInput;
     }
 
