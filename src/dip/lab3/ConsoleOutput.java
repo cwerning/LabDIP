@@ -11,7 +11,7 @@ package dip.lab3;
  */
 public class ConsoleOutput implements Output{
     
-    String input;
+    private String input;
 
     public ConsoleOutput(String input) {
         this.setInput(input);

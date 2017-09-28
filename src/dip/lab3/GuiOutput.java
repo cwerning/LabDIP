@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 public class GuiOutput implements Output {
     
-    String input;
+    private String input;
 
     public GuiOutput(String input) {
         this.setInput(input);

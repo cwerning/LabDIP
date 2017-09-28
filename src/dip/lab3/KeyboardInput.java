@@ -11,7 +11,7 @@ package dip.lab3;
  */
 public class KeyboardInput implements Input {
 
-    String keyboardInput;
+    private String keyboardInput;
 
     public KeyboardInput(String KeyboardInput) {
         

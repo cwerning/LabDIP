@@ -14,10 +14,10 @@ import java.util.Scanner;
 
 public class FileInput implements Input {
 
-    String fileName;
-    String message;
+    private String fileName;
+    private String message;
 
-    File inFile = new File(getFileName());
+    private File inFile = new File(getFileName());
 
     public FileInput(String fileName) {
         this.setFileName(fileName);
