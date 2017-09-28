@@ -17,7 +17,7 @@ public class TipService {
         this.setTipCalc(tipCalc);
     }
 
-    public TipCalculator getTipCalc() {
+    public final TipCalculator getTipCalc() {
         return tipCalc;
     }
 
