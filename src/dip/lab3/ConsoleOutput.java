@@ -14,7 +14,7 @@ public class ConsoleOutput implements Output{
     String input;
 
     public ConsoleOutput(String input) {
-        this.input = input;
+        this.setInput(input);
     }
     
     @Override
